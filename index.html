@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Recálculo de Mensalidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Recálculo de Mensalidade</h1>
+        <form id="calcForm">
+            <label for="gradeFechada">Valor da Grade Fechada (R$):</label>
+            <input type="number" id="gradeFechada" name="gradeFechada" step="0.01" required>
+            
+            <label for="valorCredito">Valor do Crédito Extra (R$):</label>
+            <input type="number" id="valorCredito" name="valorCredito" step="0.01" required>
+            
+            <label for="creditosPermitidos">Créditos Permitidos:</label>
+            <input type="number" id="creditosPermitidos" name="creditosPermitidos" required>
+            
+            <label for="creditosPegos">Número de Créditos Pegos:</label>
+            <input type="number" id="creditosPegos" name="creditosPegos" required>
+            
+            <label for="primeiraParcelaPaga">Primeira Parcela Paga?</label>
+            <select id="primeiraParcelaPaga" name="primeiraParcelaPaga" required>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            
+            <label for="funcionalidade">Selecione a Funcionalidade:</label>
+            <select id="funcionalidade" name="funcionalidade" required>
+                <option value="default">Padrão</option>
+                <option value="segundaParcela">Calcular a partir da 2ª parcela</option>
+                <option value="terceiraParcela">Calcular a partir da 3ª parcela</option>
+            </select>
+            
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
